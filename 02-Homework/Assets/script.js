@@ -63,6 +63,7 @@ function Quiz() {
   startBtn.setAttribute("style", "text-align:center;");
 }
 
+//////////////////Question 1/////////////////
 function Q1() {
   h1Heading.textContent = " ";
   h2Openning.textContent = " ";
@@ -88,15 +89,33 @@ function Q1() {
   body.append(questionDiv);
 
   //logics
-  a1Btn.addEventListener("click", function () {
-    if (true) {
-      Q2();
-    } else {
-      console.log("error");
-    }
-  });
+  a1Btn.addEventListener("click", Q2);
+  a2Btn.addEventListener("click", function () {});
+}
 
-  function Q2() {}
+//////////////////Question 2/////////////////
+function Q2() {
+  h1Heading.textContent = " ";
+  h2Openning.textContent = " ";
+
+  listEl.textContent = " Arrays in Javascript can be used tto store __________";
+
+  b1Btn.textContent = "numbers and strings";
+  b2Btn.textContent = "other arrays";
+  b3Btn.textContent = "booleans";
+  b4Btn.textContent = "all of the above";
+
+  b1.appendChild(b1Btn);
+  b2.appendChild(b2Btn);
+  b3.appendChild(b3Btn);
+  b4.appendChild(b4Btn);
+  listEl.appendChild(b1);
+  listEl.appendChild(b2);
+  listEl.appendChild(b3);
+  listEl.appendChild(b4);
+
+  questionDiv.appendChild(listEl);
+  body.append(questionDiv);
 }
 
 Quiz();
